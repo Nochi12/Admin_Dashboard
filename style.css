@@ -33,7 +33,16 @@ p {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
+:root{
+  --big_header: 35px;
+  --small_header: 25px;
 
+  --bg_color_black: rgb(32, 30, 30);
+  --bg_color_gray: #656e72 ;
+
+  --white_txt: white;
+
+}
 .container{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -57,28 +66,43 @@ ul, li {
 
 a:link {
   text-decoration: none;
+  color: var(--bg_color_black);
 }
 
 a:visited {
   text-decoration: none;
+    color: var(--bg_color_black);
 }
+
 
 a:hover {
    text-decoration: none;
+     color: var(--bg_color_black);
 }
+
 
 a:active {
   text-decoration: none;
+  color: var(--bg_color_black);
 }
-
+.logo_container{
+  display: grid;
+  justify-content: center;
+  grid-column: 1/2;
+  grid-row: 1 /2;
+  background-color: var(--bg_color_gray);
+}
 .dashboard{
   display: grid;
-  grid-template-rows: 50px 1fr 2fr;
-  gap: 50px
+  grid-template-rows:  1fr 2fr;
+  gap: 50px;
+  justify-content:center;
+  background: var(--bg_color_gray);
+
 }
 .header{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr ;
 }
 .main{
    display: grid;
@@ -87,4 +111,26 @@ a:active {
 
 .project{
   grid-row: 1 / 3;
+
 }
+.logo{
+  font-size: var(--big_header);
+  display: flex;
+  gap: 10px;
+  
+}
+.logo_container .logo img{
+   height: 45px;
+  width: 45px;
+}
+.dashboard img{
+  height: var(--big_header);
+  width: var(--big_header);
+}
+.nav1 li,
+.nav2 li{
+  font-size: var(--small_header);
+  display: flex;
+  gap: 10px;
+}
+
