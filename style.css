@@ -34,13 +34,17 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 :root{
+  --bigest_header:100px;
+  --biger_header: 50px;
   --big_header: 35px;
   --small_header: 25px;
 
-  --bg_color_black: rgb(32, 30, 30);
-  --bg_color_gray: #656e72 ;
+  --bg_color_black: 	#242424(32, 30, 30);
+  --bg_color_gray: 		#515155;
+  --bg_color_light_gray: #7F8086;
 
   --white_txt: white;
+
 
 }
 .container{
@@ -87,22 +91,26 @@ a:active {
 }
 .logo_container{
   display: grid;
-  justify-content: center;
+  justify-content: start;
   grid-column: 1/2;
   grid-row: 1 /2;
   background-color: var(--bg_color_gray);
+  padding-left: 35px;
 }
 .dashboard{
   display: grid;
   grid-template-rows:  1fr 2fr;
   gap: 50px;
-  justify-content:center;
+  justify-content:start;
   background: var(--bg_color_gray);
 
 }
 .header{
   display: grid;
   grid-template-columns: 2fr 1fr ;
+  padding-left: 30px;
+  padding-top: var(--small_header);
+  background: var(--bg_color_light_gray);
 }
 .main{
    display: grid;
@@ -112,6 +120,9 @@ a:active {
 .project{
   grid-row: 1 / 3;
 
+}
+.logo_container{
+   padding-top: var(--small_header)
 }
 .logo{
   font-size: var(--big_header);
@@ -134,3 +145,49 @@ a:active {
   gap: 10px;
 }
 
+form label
+{
+  height: var(--big_header);
+  width: var(--big_header);
+ gap: var(--small_header);
+}
+form input[type="text"]{
+  padding: 7px;
+  font-size: 14px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--bg_color_gray);
+  width: 700px;
+}
+.search form{
+  display: flex; 
+   gap: var(--small_header);
+}
+.info{
+  display: flex;
+  gap: var(--small_header);
+  font-size: var(--small_header);
+}
+.img1 img{
+  height: var(--big_header);
+  width: var(--big_header);
+}
+.img2 img{
+    margin-top: -10px;
+    height: var(--biger_header);
+    width: var(--biger_header);
+    border-radius: 50%;
+}
+.greetings{
+  display:  grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.greetings  .profile{
+  grid-row: 1 /3 ;
+}
+
+.profile image{
+ 
+}
