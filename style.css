@@ -43,10 +43,12 @@ h1, h2, h3, h4, h5, h6 {
   --bg_color_dark_gray: 	#454547;
   --bg_color_gray: 		#515155;
   --bg_color_light_gray: #7F8086;
-
+  --bg_color_gray_lightest: #b4b5be;
   --white_txt: white;
 
   --small_txt:16px;
+
+  --shadow: 1px 3px 5px 0px rgba(0,0,0,0.26);
 }
 .container{
   display: grid;
@@ -113,7 +115,7 @@ a:active {
   padding-top: var(--small_header);
   background: var(--bg_color_light_gray);
   gap: 20px;
-  box-shadow: 8px 5px 16px 0px rgba(0,0,0,0.26);
+  box-shadow: var(--shadow);
 }
 .main{
    display: grid;
@@ -231,4 +233,59 @@ form input[type="text"]{
 
 .buttons button:active{
   background-color: var(--bg_color_dark_gray);
+}
+
+.main{
+  background-color: var(--bg_color_gray_lightest);
+  padding-left: 30px;
+}
+
+.project .project_header,
+.project_card .project_title{
+  font-size: var(--small_header);
+  font-weight: 400;
+}
+
+.project_card .project_title,
+.project_card p{
+  text-align: left;
+} 
+.project_logo{
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+  padding-right: var(--small_header);
+}
+.project_header{
+  align-self: end;
+}
+.project_logo img{
+  height: var(--big_header);
+  width: var(--big_header);
+}
+
+.project_card{
+  background: var(--bg_color_light_gray);
+}
+.project{
+      display: grid;
+    grid-template-rows: 60px 1fr;
+     
+}
+.project_list{
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 15px;
+}
+.project_card{
+  height: 230px;
+  border-left: solid 10px 	#282e3c;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 180px 50px;
+  box-shadow: var(--shadow);
+}
+.project_txt{
+  justify-self: center;
+  padding: 50px 30px 10px 30px;
 }
