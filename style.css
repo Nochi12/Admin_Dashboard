@@ -1,5 +1,5 @@
 /*
-  Josh's Custom CSS Reset
+  Josh"s Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *, *::before, *::after {
@@ -33,6 +33,14 @@ p {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
+@font-face {
+    font-family: "batmanfont";
+    src: url("./fonts/batman-webfont.woff2") format("woff2"),
+         url("./fonts/batman-webfont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root{
   --biggest_header:100px;
   --bigger_header: 50px;
@@ -49,6 +57,11 @@ h1, h2, h3, h4, h5, h6 {
   --small_txt:16px;
   --medium_txt: 20px;
   --shadow: 1px 3px 5px 0px rgba(0,0,0,0.26);
+
+  
+}
+body{
+  font-family: "batmanfont",roboto, 'Times New Roman', Times, serif ,arial;
 }
 .container{
   display: grid;
@@ -240,6 +253,7 @@ form input[type="text"]{
 
 .main{
   background-color: var(--bg_color_gray_lightest);
+  padding-left: 50px;
   padding-left: 30px;
 }
 
@@ -308,7 +322,8 @@ form input[type="text"]{
   box-shadow: var(--shadow);
 }
 .trending_header{
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .announcement_part .announcement_subhead{
@@ -344,4 +359,9 @@ form input[type="text"]{
     height: var(--bigger_header);
     width: var(--bigger_header);
     border-radius: 50%;
+}
+
+.trending_part p{
+  font-size: var(--small_txt);
+  margin-left: -25px;
 }
